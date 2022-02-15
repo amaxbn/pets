@@ -1,0 +1,393 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #B36050;
+  height: 47px;
+  width: 100%;
+  max-width: 1440px;
+  color: #F1D3B9;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  height: 61px;
+  width: 100%;
+  max-width: 1440px;
+  color: #B4604D;
+
+  &_section {
+    display: flex;
+    align-items: center;
+  }
+
+  &_section_item {
+    padding: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.logo {
+  margin-left: -138px;
+}
+
+.logo-item {
+  width: 120px;
+  height: 56px;
+}
+
+.slide {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 435px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 48px;
+  width: 100px;
+  background: #B45F4D;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.block {
+  height: 304px;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #A9AE8D;
+  color: #F6F4EC;
+
+  &-h1 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    margin-left: 70px;
+    padding-top: 69px;
+  }
+
+  &-h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    margin-left: 70px;
+  }
+
+  &-title {
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: 30px;
+
+  }
+}
+
+.back {
+  color: #B45F4D;
+  width: 100%;
+  max-width: 1440px;
+  height: 835px;
+  background-color: #F6F4EC;
+  margin-bottom: 24px;
+
+  &_h2 {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F4EC;
+    padding-top: 39px;
+    margin-bottom: 44px;
+    font-weight: 400;
+  }
+
+  .products {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    &_item {
+
+      &_img {
+        height: 567px;
+        width: 380px;
+        margin-bottom: 10px;
+      }
+
+      &_text {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: space-between;
+
+    &_left {
+      margin-left: 50px;
+    }
+
+    &_right {
+      margin-right: 50px;
+    }
+  }
+}
+
+.candle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  max-width: 1440px;
+
+
+  &_img {
+    width: 90%;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 90%;
+    height: 92px;
+    background-color: #DF9B7A;
+
+    &_p {
+      padding: 30px;
+      font-size: 20px;
+    }
+  }
+}
+
+.foto-block {
+  height: 1069px;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #F1D3B9;
+
+  &_item1 {
+    margin-left: 184px;
+  }
+
+  &_item2 {
+    margin-left: 100px;
+    z-index: 1;
+    margin-top: -470px;;
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 582px;
+    width: 460px;
+    background-color: white;
+    color: #B45F4D;
+    margin-left: 750px;
+    margin-top: 224px;
+
+    h2, p {
+      max-width: 350px;
+    }
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 22px;
+    }
+    p {
+      font-size: 19px;
+      margin-bottom: 41px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &_p {
+      width: 100%;
+      max-width: 1440px;
+      text-align: left;
+    }
+  }
+}
+
+.follow {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 48px 0;
+  max-width: 1440px;
+}
+
+.carusel {
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 43px;
+}
+
+.footer {
+  max-width: 1440px;
+  background-color: #F6F4EC;
+  height: 401px;
+  color: #B45F4D;
+
+  .list1 {
+    position: absolute;
+    margin: 64px 0 0 50px;
+    list-style-type: none;
+
+    &_item {
+      margin-bottom: 12px;
+    }
+
+    &:last-child {
+      margin-left: 200px;
+    }
+  }
+
+  .list2 {
+    position: absolute;
+    margin: 64px 0 0 200px;
+    list-style-type: none;
+
+    &_item {
+      margin-bottom: 12px;
+    }
+  }
+
+  &_right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #C17C6C;
+
+    &_sub {
+      width: 40%;
+    }
+
+    &_subscribe {
+      width: 500px;
+      height: 44px;
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    &_text {
+      width: 40%;
+      margin-top: 62px;
+      margin-bottom: 12px;
+    }
+
+    &_p {
+      width: 40%;
+    }
+  }
+
+  &_author {
+    margin-left: 50px;
+  }
+}
+
